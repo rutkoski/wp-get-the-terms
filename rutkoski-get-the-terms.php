@@ -9,7 +9,7 @@
  * that starts the plugin.
  *
  * @link              http://devcafe.com.br
- * @since             1.0.0
+ * @since             1.0.1
  * @package           Rutkoski_Get_The_Terms
  *
  * @wordpress-plugin
