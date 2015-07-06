@@ -171,8 +171,30 @@ class Rutkoski_Get_The_Terms {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		add_shortcode( 'get-the-terms', array( $this, 'shortcode_get_the_terms' ) );
+		
 	}
 
+	public function shortcode_get_the_terms( $atts ) {
+	  $a = shortcode_atts( array(
+	      'id' => the_ID(),
+	      'tax' => 'post_tag',
+	      'separator' => ', ',
+	      'term_wrap' => '<span class="term">%s</span>',
+	      'wrap' => '%s'
+	  ), $atts );
+	  
+	  $terms = get_the_terms($a['id'], $a['tax']);
+	  
+	  $_terms = array();
+	  
+	  foreach ($terms as $term) {
+	    $_terms[] = sprintf($a['term_wrap'], $term->name);
+	  }
+	
+	  return sprintf($a['wrap'], implode($a['separator'], $_terms));
+	}
+	
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
