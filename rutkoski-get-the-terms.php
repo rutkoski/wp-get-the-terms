@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              http://devcafe.com.br
- * @since             1.0.0
+ * @since             1.0.1
  * @package           Rutkoski_Get_The_Terms
  *
  * @wordpress-plugin
  * Plugin Name:       Get the terms
  * Plugin URI:        https://github.com/rutkoski/wp-get-the-terms
  * Description:       Shortcode for Wordpress function get_the_terms
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Rodrigo Rutkoski Rodrigues
  * Author URI:        http://devcafe.com.br
  * License:           GPL-2.0+
