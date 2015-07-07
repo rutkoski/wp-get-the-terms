@@ -177,7 +177,7 @@ class Rutkoski_Get_The_Terms {
 
 	public function shortcode_get_the_terms( $atts ) {
 	  $a = shortcode_atts( array(
-	      'id' => the_ID(),
+	      'id' => get_the_ID(),
 	      'tax' => 'post_tag',
 	      'separator' => ', ',
 	      'term_wrap' => '<span class="term">%s</span>',
